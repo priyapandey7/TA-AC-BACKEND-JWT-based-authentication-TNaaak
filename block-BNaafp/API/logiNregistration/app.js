@@ -10,7 +10,7 @@ var v1usersRouter = require('./routes/v1users');
 
 // Connecting To MongoDB
 mongoose.connect(
-  'mongodb://localhost/DemoOneJWT',
+  'mongodb://localhost/logiNregistration',
   { useNewUrlParser: true, useUnifiedTopology: true },
   (error) => {
     console.log('Connected to database: ', error ? false : true);
