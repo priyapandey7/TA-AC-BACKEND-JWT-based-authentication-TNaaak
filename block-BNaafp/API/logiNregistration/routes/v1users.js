@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 // Sign In
 router.post('/register', async (req, res, next) => {
   try {
-    var user = await V1User.create(req.body);
+    var user = await User.create(req.body);
     res.status(201).json({
       name: user.name,
       message: 'Registered Succesfully',
@@ -27,7 +27,7 @@ router.post('/login', async (req, res, next) => {
     return res.status(400).json({ error: 'Email/Password is missing' });
   }
   try {
-    var user = await V1User.findOne({ email });
+    var user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ error: 'Email not registered' });
     }
