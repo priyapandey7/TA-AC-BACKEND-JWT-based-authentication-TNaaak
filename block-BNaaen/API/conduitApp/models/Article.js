@@ -24,7 +24,6 @@ var articleSchema = new Schema(
     { timestamps: true }
   );
 
-
 // Method to give details of Article
 articleSchema.methods.resultArticle = function (id = null) {
     return {
